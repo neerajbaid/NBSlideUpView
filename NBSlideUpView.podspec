@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NBSlideUpView"
-  s.version      = "1.0"
+  s.version      = "0.1"
   s.summary      = "A drop-in modal view that animates on and off the screen to display information"
   s.homepage     = "https://github.com/neerajbaid/NBSlideUpView/"
   s.license      = { :type => 'MIT', :text => 'Copyright 2014. Neeraj Baid. This library is distributed under the terms of the MIT/X11.' }
