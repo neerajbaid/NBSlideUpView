@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NBSlideUpView.h"
 
-@interface NBViewController : UIViewController
+@interface NBViewController : UIViewController <NBSlideUpViewDelegate>
 
 @end

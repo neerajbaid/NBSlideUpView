@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol NBSlideUpViewDelegate <NSObject>
+
+- (void)slideUpViewDidAnimateOut:(UIView *)slideUpView;
+- (void)slideUpViewDidAnimateIn:(UIView *)slideUpView;
+- (void)slideUpViewDidAnimateRestore:(UIView *)slideUpView;
+
+@end
+
 @interface NBSlideUpView : UIView <UIAlertViewDelegate>
 
 - (id)initWithSuperview:(UIView *)superview viewableHeight:(CGFloat)viewablePixels;
@@ -23,7 +31,7 @@
 @property (nonatomic) CGFloat arrowAlpha;
 @property (nonatomic) CGFloat animateInOutTime;
 @property (nonatomic) BOOL superviewIsScrollView;
-@property (nonatomic) BOOL disablesScrollUponAppearance;
 @property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) id<NBSlideUpViewDelegate> delegate;
 
 @end

@@ -50,7 +50,6 @@
         
         if ([superview isKindOfClass:[UIScrollView class]])
             self.superviewIsScrollView = YES;
-        self.disablesScrollUponAppearance = YES;
         
         [superview addSubview:self];
     }
@@ -97,8 +96,8 @@
      {
          self.frame = CGRectMake(self.frame.origin.x, self.superview.frame.size.height - self.viewablePixels, self.frame.size.width, self.frame.size.height);
      } completion:^(BOOL completed){
-         if (self.superviewIsScrollView && self.disablesScrollUponAppearance)
-             ((UIScrollView *)self.superview).scrollEnabled = YES;
+         if (completed)
+             [self.delegate slideUpViewDidAnimateIn:self];
      }];
 }
 
@@ -112,8 +111,8 @@
              self.frame = CGRectMake(self.frame.origin.x, self.superview.frame.size.height, self.frame.size.width, self.frame.size.height);
          
      } completion:^(BOOL completed) {
-         if (self.superviewIsScrollView && self.disablesScrollUponAppearance)
-             ((UIScrollView *)self.superview).scrollEnabled = YES;
+         if (completed)
+             [self.delegate slideUpViewDidAnimateOut:self];
      }];
 }
 
@@ -126,6 +125,8 @@
          else
              self.frame = CGRectMake(self.frame.origin.x, self.superview.frame.size.height - self.viewablePixels, self.frame.size.width, self.frame.size.height);
      } completion:^(BOOL completed){
+         if (completed)
+             [self.delegate slideUpViewDidAnimateRestore:self];
      }];
 }
 
