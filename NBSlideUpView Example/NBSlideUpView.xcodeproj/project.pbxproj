@@ -22,12 +22,12 @@
 		070BDB3A1905AE9A005CB41D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 070BDB381905AE9A005CB41D /* InfoPlist.strings */; };
 		070BDB3C1905AE9A005CB41D /* NBSlideUpViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB3B1905AE9A005CB41D /* NBSlideUpViewTests.m */; };
 		070BDB471905AEB9005CB41D /* NBSlideUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB461905AEB9005CB41D /* NBSlideUpView.m */; };
-		070BDB491905BA8B005CB41D /* Close Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 070BDB481905BA8B005CB41D /* Close Arrow.png */; };
 		070BDB541905C8CB005CB41D /* SlideUpContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070BDB531905C8CB005CB41D /* SlideUpContentView.xib */; };
 		070BDB5F1905CA9D005CB41D /* GBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB5A1905CA9D005CB41D /* GBFlatButton.m */; };
 		070BDB601905CA9D005CB41D /* GBFlatSelectableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB5C1905CA9D005CB41D /* GBFlatSelectableButton.m */; };
 		070BDB611905CA9D005CB41D /* UIColor+GBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB5E1905CA9D005CB41D /* UIColor+GBFlatButton.m */; };
 		070BDB641905D5BC005CB41D /* SlideUpContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB631905D5BC005CB41D /* SlideUpContentView.m */; };
+		070BDB661905E56B005CB41D /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 070BDB651905E56B005CB41D /* close.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		070BDB3B1905AE9A005CB41D /* NBSlideUpViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBSlideUpViewTests.m; sourceTree = "<group>"; };
 		070BDB451905AEB9005CB41D /* NBSlideUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBSlideUpView.h; sourceTree = "<group>"; };
 		070BDB461905AEB9005CB41D /* NBSlideUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBSlideUpView.m; sourceTree = "<group>"; };
-		070BDB481905BA8B005CB41D /* Close Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close Arrow.png"; sourceTree = "<group>"; };
 		070BDB531905C8CB005CB41D /* SlideUpContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SlideUpContentView.xib; path = ../SlideUpContentView.xib; sourceTree = "<group>"; };
 		070BDB591905CA9D005CB41D /* GBFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBFlatButton.h; sourceTree = "<group>"; };
 		070BDB5A1905CA9D005CB41D /* GBFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBFlatButton.m; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		070BDB5E1905CA9D005CB41D /* UIColor+GBFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GBFlatButton.m"; sourceTree = "<group>"; };
 		070BDB621905D5BC005CB41D /* SlideUpContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideUpContentView.h; sourceTree = "<group>"; };
 		070BDB631905D5BC005CB41D /* SlideUpContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideUpContentView.m; sourceTree = "<group>"; };
+		070BDB651905E56B005CB41D /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 			children = (
 				070BDB451905AEB9005CB41D /* NBSlideUpView.h */,
 				070BDB461905AEB9005CB41D /* NBSlideUpView.m */,
-				070BDB481905BA8B005CB41D /* Close Arrow.png */,
+				070BDB651905E56B005CB41D /* close.png */,
 				070BDB581905CA9D005CB41D /* Classes */,
 				070BDB101905AE99005CB41D /* Foundation.framework */,
 				070BDB121905AE99005CB41D /* CoreGraphics.framework */,
@@ -271,7 +271,7 @@
 				070BDB291905AE9A005CB41D /* Images.xcassets in Resources */,
 				070BDB1B1905AE99005CB41D /* InfoPlist.strings in Resources */,
 				070BDB241905AE9A005CB41D /* Main.storyboard in Resources */,
-				070BDB491905BA8B005CB41D /* Close Arrow.png in Resources */,
+				070BDB661905E56B005CB41D /* close.png in Resources */,
 				070BDB541905C8CB005CB41D /* SlideUpContentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

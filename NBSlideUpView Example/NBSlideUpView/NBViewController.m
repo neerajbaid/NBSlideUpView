@@ -24,7 +24,6 @@
     self.slideUpView = slideUpView;
     self.slideUpView.delegate = self;
     
-    NSLog(@"%@", [[[NSBundle mainBundle] loadNibNamed:@"SlideUpContentView" owner:self options:nil][0] class]);
     UIView *contentViewSubview = [[NSBundle mainBundle] loadNibNamed:@"SlideUpContentView" owner:self options:nil][0];
     contentViewSubview.layer.cornerRadius = 15;
     contentViewSubview.layer.masksToBounds = YES;
