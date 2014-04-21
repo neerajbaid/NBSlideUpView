@@ -27,6 +27,7 @@
 		070BDB5F1905CA9D005CB41D /* GBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB5A1905CA9D005CB41D /* GBFlatButton.m */; };
 		070BDB601905CA9D005CB41D /* GBFlatSelectableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB5C1905CA9D005CB41D /* GBFlatSelectableButton.m */; };
 		070BDB611905CA9D005CB41D /* UIColor+GBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB5E1905CA9D005CB41D /* UIColor+GBFlatButton.m */; };
+		070BDB641905D5BC005CB41D /* SlideUpContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB631905D5BC005CB41D /* SlideUpContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		070BDB5C1905CA9D005CB41D /* GBFlatSelectableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBFlatSelectableButton.m; sourceTree = "<group>"; };
 		070BDB5D1905CA9D005CB41D /* UIColor+GBFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GBFlatButton.h"; sourceTree = "<group>"; };
 		070BDB5E1905CA9D005CB41D /* UIColor+GBFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GBFlatButton.m"; sourceTree = "<group>"; };
+		070BDB621905D5BC005CB41D /* SlideUpContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideUpContentView.h; sourceTree = "<group>"; };
+		070BDB631905D5BC005CB41D /* SlideUpContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideUpContentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				070BDB221905AE9A005CB41D /* Main.storyboard */,
 				070BDB251905AE9A005CB41D /* NBViewController.h */,
 				070BDB261905AE9A005CB41D /* NBViewController.m */,
+				070BDB621905D5BC005CB41D /* SlideUpContentView.h */,
+				070BDB631905D5BC005CB41D /* SlideUpContentView.m */,
 				070BDB531905C8CB005CB41D /* SlideUpContentView.xib */,
 				070BDB281905AE9A005CB41D /* Images.xcassets */,
 				070BDB171905AE99005CB41D /* Supporting Files */,
@@ -289,6 +294,7 @@
 				070BDB271905AE9A005CB41D /* NBViewController.m in Sources */,
 				070BDB211905AE9A005CB41D /* NBAppDelegate.m in Sources */,
 				070BDB611905CA9D005CB41D /* UIColor+GBFlatButton.m in Sources */,
+				070BDB641905D5BC005CB41D /* SlideUpContentView.m in Sources */,
 				070BDB1D1905AE9A005CB41D /* main.m in Sources */,
 				070BDB471905AEB9005CB41D /* NBSlideUpView.m in Sources */,
 				070BDB5F1905CA9D005CB41D /* GBFlatButton.m in Sources */,
@@ -497,6 +503,7 @@
 				070BDB411905AE9A005CB41D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		070BDB421905AE9A005CB41D /* Build configuration list for PBXNativeTarget "NBSlideUpViewTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +512,7 @@
 				070BDB441905AE9A005CB41D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

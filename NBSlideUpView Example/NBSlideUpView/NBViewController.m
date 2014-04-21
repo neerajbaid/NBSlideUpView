@@ -20,14 +20,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NBSlideUpView *slideUpView = [[NBSlideUpView alloc] initWithSuperview:self.view viewableHeight:120];
+    NBSlideUpView *slideUpView = [[NBSlideUpView alloc] initWithSuperview:self.view viewableHeight:200];
     self.slideUpView = slideUpView;
     self.slideUpView.delegate = self;
     
     NSLog(@"%@", [[[NSBundle mainBundle] loadNibNamed:@"SlideUpContentView" owner:self options:nil][0] class]);
-    [self.slideUpView.contentView addSubview:[[NSBundle mainBundle] loadNibNamed:@"SlideUpContentView" owner:self options:nil][0]];
-//    self.slideUpView.contentView = [[NSBundle mainBundle] loadNibNamed:@"SlideUpContentView" owner:self options:nil][0];
-	// Do any additional setup after loading the view, typically from a nib.
+    UIView *contentViewSubview = [[NSBundle mainBundle] loadNibNamed:@"SlideUpContentView" owner:self options:nil][0];
+    contentViewSubview.layer.cornerRadius = 15;
+    contentViewSubview.layer.masksToBounds = YES;
+    [self.slideUpView.contentView addSubview:contentViewSubview];
 }
 
 - (IBAction)animateIn:(id)sender
