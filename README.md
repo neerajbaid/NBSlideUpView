@@ -17,6 +17,7 @@ This is a highly customizable, sticky modal view that slides up from the bottom 
 ###CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like NBSlideUpView in your projects.
 ```ruby
+platform :ios, '7.0'
 pod "NBSlideUpView"
 ```
 
