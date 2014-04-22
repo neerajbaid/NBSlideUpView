@@ -2,7 +2,7 @@ NBSlideUpView
 =============
 ####By [@2neeraj](http://twitter.com/2neeraj)
 
-This is a highly customizable modal view that slides up from the bottom of the screen. NBSlideUpView can be dragged off the screen or dismissed programatically.
+This is a highly customizable, sticky modal view that slides up from the bottom of the screen. NBSlideUpView can be dragged off the screen or dismissed programatically.
 
 ![](example.gif)
 
@@ -39,26 +39,32 @@ Add a subview to the NBSlideUpView's contentView.
 ### Delegate Methods
 
 ```smalltalk
+NBSlideUpViewDelegate
 - (void)slideUpViewDidAnimateOut:(UIView *)slideUpView;
 - (void)slideUpViewDidAnimateIn:(UIView *)slideUpView;
 - (void)slideUpViewDidAnimateRestore:(UIView *)slideUpView;
 ```
 
 ###Customization
-Change the height of the view.
+Height of the view.
 
 ```smalltalk
 @property (nonatomic) CGFloat viewablePixels;
 ```
-Change any aspect of the spring-loaded animation.
+Any aspect of the spring-loaded animation.
 
 ```smalltalk
-@property (nonatomic) CGFloat springDamping;
-@property (nonatomic) CGFloat initialSpringVelocity;
-@property (nonatomic) CGFloat animateInOutTime;
+@property (nonatomic) CGFloat springDamping; "Default to 0.8"
+@property (nonatomic) CGFloat initialSpringVelocity; "Default to 1"
+@property (nonatomic) CGFloat animateInOutTime; "Default to 0.5"
 ```
-Change the duration of the in, out, and restore animations.
 
+The stickiness of the view.
 ```smalltalk
-@property (nonatomic) CGFloat animateInOutTime;
+@property (nonatomic) CGFloat dragMultiplier;
+"1.0 means the view moves with the user's finger. > 1.0 means the view sticks. Defaults to 3.0"
+```
+Opacity of the default downward arrow.
+```smalltalk
+@property (nonatomic) CGFloat arrowAlpha; "Default to 0.7"
 ```
