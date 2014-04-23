@@ -4,6 +4,8 @@ NBSlideUpView
 
 This is a highly customizable, sticky modal view that slides up from the bottom of the screen. NBSlideUpView can be dragged off the screen or dismissed programatically.
 
+(If the below gif doesn't autoplay, feel free to click on it.)
+
 ![](example.gif)
 
 
@@ -16,6 +18,8 @@ This is a highly customizable, sticky modal view that slides up from the bottom 
 ##Installation
 ###CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like NBSlideUpView in your projects.
+
+If the cocoapods installation doesn't work, please use the <b>Alternative</b> below.
 ```ruby
 platform :ios, '7.0'
 pod "NBSlideUpView"
