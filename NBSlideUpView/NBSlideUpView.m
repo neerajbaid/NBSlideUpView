@@ -52,6 +52,9 @@
             self.superviewIsScrollView = YES;
         
         [superview addSubview:self];
+        
+        UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPanned:)];
+        [self addGestureRecognizer:pan];
     }
     return self;
 }
@@ -69,25 +72,19 @@
 }
 
 # pragma mark - Touches/Dragging
-
-- (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event
-{
-    UITouch* touch = [touches anyObject];
-    CGPoint location = [touch locationInView:self.superview];
-    if (self.previousTouch.y == 0)
-        _previousTouch = location;
-    CGFloat translation = location.y - self.previousTouch.y;
-    [self setCenter:CGPointMake(self.center.x, self.center.y + translation/self.dragMultiplier)];
-    _previousTouch = location;
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    _previousTouch = CGPointMake(0, 0);
-    if (self.frame.origin.y > self.superview.frame.size.height - self.viewablePixels)
-        [self animateOut];
-    else
-        [self animateRestore];
+-(void)onPanned:(UIPanGestureRecognizer*)pan{
+    if(pan.state == UIGestureRecognizerStateEnded) {
+        if (self.frame.origin.y > self.superview.frame.size.height - self.viewablePixels)
+            [self animateOut];
+        else
+            [self animateRestore];
+    }else{
+        CGPoint offset = [pan translationInView:self];
+        CGPoint center = self.center;
+        center.y += offset.y / self.dragMultiplier;
+        self.center = center;
+        [pan setTranslation:CGPointZero inView:self];
+    }
 }
 
 - (void)animateIn
@@ -131,3 +128,4 @@
 }
 
 @end
+
