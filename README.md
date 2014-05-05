@@ -11,7 +11,7 @@ This is a highly customizable, sticky modal view that slides up from the bottom 
 
 #####Used in
 * [giftbook](https://itunes.apple.com/us/app/giftbook-gift-cards-on-your/id707069900?mt=8)
-* WWDC 2014 Scholarship Application
+* [WWDC 2014 Scholarship-winning App](https://github.com/neerajbaid/WWDC2014)
 
 ####Let [me](http://twitter.com/2neeraj) know where you use this library so I can add to the list here!
 
