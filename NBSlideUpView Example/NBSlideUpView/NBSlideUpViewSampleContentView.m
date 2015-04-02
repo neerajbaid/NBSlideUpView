@@ -4,7 +4,9 @@
 @implementation NBSlideUpViewSampleContentView
 
 - (IBAction)sampleButton:(id)sender {
-    [((NBSlideUpView *)self.superview.superview) animateOut];
+    if ([self.delegate respondsToSelector:@selector(slideUpViewSampleContentViewDidRequestAnimateOut:)]) {
+        [self.delegate slideUpViewSampleContentViewDidRequestAnimateOut:self];
+    }
 }
 
 @end

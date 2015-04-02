@@ -1,7 +1,8 @@
-#import "NBViewController.h"
 #import "NBSlideUpView.h"
+#import "NBSlideUpViewSampleContentView.h"
+#import "NBViewController.h"
 
-@interface NBViewController ()
+@interface NBViewController () <NBSlideUpViewSampleContentViewDelegate>
 
 @property (nonatomic, strong) NBSlideUpView *slideUpView;
 
@@ -15,15 +16,19 @@
     self.slideUpView = slideUpView;
     self.slideUpView.delegate = self;
     
-    UIView *contentViewSubview = [[NSBundle mainBundle] loadNibNamed:@"SlideUpContentView" owner:self options:nil][0];
-    contentViewSubview.layer.cornerRadius = 15;
-    contentViewSubview.layer.masksToBounds = YES;
-    [self.slideUpView.contentView addSubview:contentViewSubview];
+    NBSlideUpViewSampleContentView *sampleContentView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([NBSlideUpViewSampleContentView class])
+                                                                                      owner:self options:nil] firstObject];
+    sampleContentView.layer.cornerRadius = 15;
+    sampleContentView.layer.masksToBounds = YES;
+    sampleContentView.delegate = self;
+    [self.slideUpView.contentView addSubview:sampleContentView];
 }
 
 - (IBAction)animateIn:(id)sender {
     [self.slideUpView animateIn];
 }
+
+#pragma mark - NBSlideUpViewDelegate
 
 - (void)slideUpViewDidAnimateIn:(UIView *)slideUpView {
     NSLog(@"NBSlideUpView animated in.");
@@ -35,6 +40,12 @@
 
 - (void)slideUpViewDidAnimateRestore:(UIView *)slideUpView {
     NSLog(@"NBSlideUpView animated restore.");
+}
+
+#pragma mark - NBSlideUpViewSampleContentViewDelegate
+
+- (void)slideUpViewSampleContentViewDidRequestAnimateOut:(NBSlideUpViewSampleContentView *)slideUpViewSampleContentView {
+    [self.slideUpView animateOut];
 }
 
 @end
