@@ -24,7 +24,6 @@
 @property (nonatomic) CGFloat animateInOutTime;
 
 @property (nonatomic) CGFloat arrowAlpha;
-@property (nonatomic) BOOL superviewIsScrollView;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) id<NBSlideUpViewDelegate> delegate;
 

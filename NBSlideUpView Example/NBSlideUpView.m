@@ -30,9 +30,6 @@
         self.animateInOutTime = 0.5;
         self.springDamping = 0.8;
         
-        if ([superview isKindOfClass:[UIScrollView class]])
-            self.superviewIsScrollView = YES;
-        
         [superview addSubview:self];
         
         UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPanned:)];
@@ -94,14 +91,10 @@
           initialSpringVelocity:self.initialSpringVelocity
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^(void) {
-                         if (self.superviewIsScrollView) {
-                             self.frame = CGRectMake(self.frame.origin.x,
-                                                     self.superview.frame.size.height + ((UIScrollView *)self.superview).contentOffset.y,
-                                                     self.frame.size.width,
-                                                     self.frame.size.height);
-                         } else {
-                             self.frame = CGRectMake(self.frame.origin.x, self.superview.frame.size.height, self.frame.size.width, self.frame.size.height);
-                         }
+                         self.frame = CGRectMake(self.frame.origin.x,
+                                                 self.superview.frame.size.height,
+                                                 self.frame.size.width,
+                                                 self.frame.size.height);
                      } completion:^(BOOL completed) {
                          if (completed) {
                              [self.delegate slideUpViewDidAnimateOut:self];
@@ -115,17 +108,10 @@
          usingSpringWithDamping:self.springDamping
           initialSpringVelocity:self.initialSpringVelocity
                         options:UIViewAnimationOptionCurveEaseInOut animations:^(void) {
-                            if (self.superviewIsScrollView) {
-                                self.frame = CGRectMake(self.frame.origin.x,
-                                                        ((UIScrollView *)self.superview).contentOffset.y + 120,
-                                                        self.frame.size.width,
-                                                        self.frame.size.height);
-                            } else {
-                                self.frame = CGRectMake(self.frame.origin.x,
-                                                        self.superview.frame.size.height - self.viewablePixels,
-                                                        self.frame.size.width,
-                                                        self.frame.size.height);
-                            }
+                            self.frame = CGRectMake(self.frame.origin.x,
+                                                    self.superview.frame.size.height - self.viewablePixels,
+                                                    self.frame.size.width,
+                                                    self.frame.size.height);
                         } completion:^(BOOL completed) {
                             if (completed) {
                                 [self.delegate slideUpViewDidAnimateRestore:self];
