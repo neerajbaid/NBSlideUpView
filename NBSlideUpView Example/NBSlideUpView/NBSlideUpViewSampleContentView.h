@@ -11,6 +11,8 @@
 
 @interface NBSlideUpViewSampleContentView : UIView
 
+- (instancetype)initWithDelegate:(id<NBSlideUpViewSampleContentViewDelegate>)delegate;
+
 @property (nonatomic, weak) id<NBSlideUpViewSampleContentViewDelegate> delegate;
 
 @end

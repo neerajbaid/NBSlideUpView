@@ -1,14 +1,8 @@
-//
-//  CardView.h
-//  gftbk
-//
-//  Created by Neeraj Baid on 3/21/14.
-//  Copyright (c) 2014 Neeraj Baid. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 @protocol NBSlideUpViewDelegate <NSObject>
+
+@optional
 
 - (void)slideUpViewDidAnimateOut:(UIView *)slideUpView;
 - (void)slideUpViewDidAnimateIn:(UIView *)slideUpView;
@@ -32,7 +26,6 @@
 @property (nonatomic) CGFloat animateInOutTime;
 
 @property (nonatomic) CGFloat arrowAlpha;
-@property (nonatomic) BOOL superviewIsScrollView;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) id<NBSlideUpViewDelegate> delegate;
 
