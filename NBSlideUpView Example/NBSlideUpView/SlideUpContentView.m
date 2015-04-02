@@ -3,8 +3,7 @@
 
 @implementation SlideUpContentView
 
-- (IBAction)sampleButton:(id)sender
-{
+- (IBAction)sampleButton:(id)sender {
     [((NBSlideUpView *)self.superview.superview) animateOut];
 }
 

@@ -9,8 +9,7 @@
 
 @implementation NBViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     NBSlideUpView *slideUpView = [[NBSlideUpView alloc] initWithSuperview:self.view viewableHeight:200];
     self.slideUpView = slideUpView;
@@ -22,23 +21,19 @@
     [self.slideUpView.contentView addSubview:contentViewSubview];
 }
 
-- (IBAction)animateIn:(id)sender
-{
+- (IBAction)animateIn:(id)sender {
     [self.slideUpView animateIn];
 }
 
-- (void)slideUpViewDidAnimateIn:(UIView *)slideUpView
-{
+- (void)slideUpViewDidAnimateIn:(UIView *)slideUpView {
     NSLog(@"view animated in");
 }
 
-- (void)slideUpViewDidAnimateOut:(UIView *)slideUpView
-{
+- (void)slideUpViewDidAnimateOut:(UIView *)slideUpView {
     NSLog(@"view animated out");
 }
 
-- (void)slideUpViewDidAnimateRestore:(UIView *)slideUpView
-{
+- (void)slideUpViewDidAnimateRestore:(UIView *)slideUpView {
     NSLog(@"view did animate restore");
 }
 
