@@ -1,23 +1,6 @@
-//
-//  CardView.m
-//  gftbk
-//
-//  Created by Neeraj Baid on 3/21/14.
-//  Copyright (c) 2014 Neeraj Baid. All rights reserved.
-//
-
 #import "NBSlideUpView.h"
 
 @implementation NBSlideUpView
-
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
 
 - (id)initWithSuperview:(UIView *)superview viewableHeight:(CGFloat)viewablePixels
 {

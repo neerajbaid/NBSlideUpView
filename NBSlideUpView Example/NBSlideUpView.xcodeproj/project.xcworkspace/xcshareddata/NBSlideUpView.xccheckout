@@ -10,29 +10,29 @@
 	<string>NBSlideUpView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0AEBB611-8405-40F2-88DE-46415A853DCB</key>
+		<key>BE526182FEC15BCD254F010067D8F8270637091C</key>
 		<string>https://github.com/neerajbaid/NBSlideUpView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>NBSlideUpView Example/NBSlideUpView.xcodeproj/project.xcworkspace</string>
+	<string>NBSlideUpView Example/NBSlideUpView.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0AEBB611-8405-40F2-88DE-46415A853DCB</key>
+		<key>BE526182FEC15BCD254F010067D8F8270637091C</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/neerajbaid/NBSlideUpView.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0AEBB611-8405-40F2-88DE-46415A853DCB</string>
+	<string>BE526182FEC15BCD254F010067D8F8270637091C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0AEBB611-8405-40F2-88DE-46415A853DCB</string>
+			<string>BE526182FEC15BCD254F010067D8F8270637091C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>NBSlideUpView</string>
 		</dict>
