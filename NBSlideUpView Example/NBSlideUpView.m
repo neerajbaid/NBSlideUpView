@@ -44,7 +44,10 @@
 - (void)setViewablePixels:(CGFloat)viewablePixels {
     _viewablePixels = viewablePixels;
     if (self.superview) {
-        CGRect frame = CGRectMake(0, self.superview.frame.size.height, self.superview.frame.size.width, viewablePixels + self.superview.frame.size.height/self.dragMultiplier);
+        CGRect frame = CGRectMake(0,
+                                  self.superview.frame.size.height,
+                                  self.superview.frame.size.width,
+                                  viewablePixels + self.superview.frame.size.height/self.dragMultiplier);
         self.frame = frame;
         frame.origin.y = 0;
         self.contentView.frame = frame;
