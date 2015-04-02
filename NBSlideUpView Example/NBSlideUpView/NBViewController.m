@@ -26,15 +26,15 @@
 }
 
 - (void)slideUpViewDidAnimateIn:(UIView *)slideUpView {
-    NSLog(@"view animated in");
+    NSLog(@"NBSlideUpView animated in.");
 }
 
 - (void)slideUpViewDidAnimateOut:(UIView *)slideUpView {
-    NSLog(@"view animated out");
+    NSLog(@"NBSlideUpView animated out.");
 }
 
 - (void)slideUpViewDidAnimateRestore:(UIView *)slideUpView {
-    NSLog(@"view did animate restore");
+    NSLog(@"NBSlideUpView animated restore.");
 }
 
 @end
