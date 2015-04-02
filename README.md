@@ -73,3 +73,10 @@ Opacity of the default downward arrow.
 ```smalltalk
 @property (nonatomic) CGFloat arrowAlpha; "Default to 0.7"
 ```
+
+Tap superview to dismiss and darkening.
+```smalltalk
+@property (nonatomic) BOOL shouldDarkenSuperview; "Default true"
+@property (nonatomic) BOOL shouldTapSuperviewToAnimateOut; "Default true"
+@property (nonatomic) BOOL shouldBlockSuperviewTouchesWhileUp; "Default true"
+```
