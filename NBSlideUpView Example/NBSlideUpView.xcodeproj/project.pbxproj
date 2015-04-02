@@ -123,7 +123,7 @@
 				07621F4A1ACCEB7A004DD684 /* NBSlideUpView.h */,
 				07621F4B1ACCEB7A004DD684 /* NBSlideUpView.m */,
 				070BDB651905E56B005CB41D /* close.png */,
-				070BDB581905CA9D005CB41D /* Classes */,
+				070BDB581905CA9D005CB41D /* GBFlatButton */,
 				070BDB101905AE99005CB41D /* Foundation.framework */,
 				070BDB121905AE99005CB41D /* CoreGraphics.framework */,
 				070BDB141905AE99005CB41D /* UIKit.framework */,
@@ -178,7 +178,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		070BDB581905CA9D005CB41D /* Classes */ = {
+		070BDB581905CA9D005CB41D /* GBFlatButton */ = {
 			isa = PBXGroup;
 			children = (
 				070BDB591905CA9D005CB41D /* GBFlatButton.h */,
@@ -188,6 +188,7 @@
 				070BDB5D1905CA9D005CB41D /* UIColor+GBFlatButton.h */,
 				070BDB5E1905CA9D005CB41D /* UIColor+GBFlatButton.m */,
 			);
+			name = GBFlatButton;
 			path = Classes;
 			sourceTree = "<group>";
 		};
