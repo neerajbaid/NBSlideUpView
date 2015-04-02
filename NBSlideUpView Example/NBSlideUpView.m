@@ -84,7 +84,7 @@
                                                  self.frame.size.width,
                                                  self.frame.size.height);
                      } completion:^(BOOL completed){
-                         if (completed) {
+                         if ([self.delegate respondsToSelector:@selector(slideUpViewDidAnimateIn:)]) {
                              [self.delegate slideUpViewDidAnimateIn:self];
                          }
                      }];
@@ -102,7 +102,7 @@
                                                  self.frame.size.width,
                                                  self.frame.size.height);
                      } completion:^(BOOL completed) {
-                         if (completed) {
+                         if ([self.delegate respondsToSelector:@selector(slideUpViewDidAnimateOut:)]) {
                              [self.delegate slideUpViewDidAnimateOut:self];
                          }
                      }];
@@ -119,7 +119,7 @@
                                                     self.frame.size.width,
                                                     self.frame.size.height);
                         } completion:^(BOOL completed) {
-                            if (completed) {
+                            if ([self.delegate respondsToSelector:@selector(slideUpViewDidAnimateRestore:)]) {
                                 [self.delegate slideUpViewDidAnimateRestore:self];
                             }
                         }];

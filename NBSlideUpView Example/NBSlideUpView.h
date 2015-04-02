@@ -2,6 +2,8 @@
 
 @protocol NBSlideUpViewDelegate <NSObject>
 
+@optional
+
 - (void)slideUpViewDidAnimateOut:(UIView *)slideUpView;
 - (void)slideUpViewDidAnimateIn:(UIView *)slideUpView;
 - (void)slideUpViewDidAnimateRestore:(UIView *)slideUpView;
