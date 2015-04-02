@@ -22,11 +22,11 @@
 		070BDB3A1905AE9A005CB41D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 070BDB381905AE9A005CB41D /* InfoPlist.strings */; };
 		070BDB3C1905AE9A005CB41D /* NBSlideUpViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB3B1905AE9A005CB41D /* NBSlideUpViewTests.m */; };
 		070BDB471905AEB9005CB41D /* NBSlideUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB461905AEB9005CB41D /* NBSlideUpView.m */; };
-		070BDB541905C8CB005CB41D /* SlideUpContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070BDB531905C8CB005CB41D /* SlideUpContentView.xib */; };
+		070BDB541905C8CB005CB41D /* NBSlideUpViewSampleContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070BDB531905C8CB005CB41D /* NBSlideUpViewSampleContentView.xib */; };
 		070BDB5F1905CA9D005CB41D /* GBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB5A1905CA9D005CB41D /* GBFlatButton.m */; };
 		070BDB601905CA9D005CB41D /* GBFlatSelectableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB5C1905CA9D005CB41D /* GBFlatSelectableButton.m */; };
 		070BDB611905CA9D005CB41D /* UIColor+GBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB5E1905CA9D005CB41D /* UIColor+GBFlatButton.m */; };
-		070BDB641905D5BC005CB41D /* SlideUpContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB631905D5BC005CB41D /* SlideUpContentView.m */; };
+		070BDB641905D5BC005CB41D /* NBSlideUpViewSampleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BDB631905D5BC005CB41D /* NBSlideUpViewSampleContentView.m */; };
 		070BDB661905E56B005CB41D /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 070BDB651905E56B005CB41D /* close.png */; };
 /* End PBXBuildFile section */
 
@@ -62,15 +62,15 @@
 		070BDB3B1905AE9A005CB41D /* NBSlideUpViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBSlideUpViewTests.m; sourceTree = "<group>"; };
 		070BDB451905AEB9005CB41D /* NBSlideUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBSlideUpView.h; sourceTree = "<group>"; };
 		070BDB461905AEB9005CB41D /* NBSlideUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBSlideUpView.m; sourceTree = "<group>"; };
-		070BDB531905C8CB005CB41D /* SlideUpContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SlideUpContentView.xib; path = ../SlideUpContentView.xib; sourceTree = "<group>"; };
+		070BDB531905C8CB005CB41D /* NBSlideUpViewSampleContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NBSlideUpViewSampleContentView.xib; path = ../NBSlideUpViewSampleContentView.xib; sourceTree = "<group>"; };
 		070BDB591905CA9D005CB41D /* GBFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBFlatButton.h; sourceTree = "<group>"; };
 		070BDB5A1905CA9D005CB41D /* GBFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBFlatButton.m; sourceTree = "<group>"; };
 		070BDB5B1905CA9D005CB41D /* GBFlatSelectableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBFlatSelectableButton.h; sourceTree = "<group>"; };
 		070BDB5C1905CA9D005CB41D /* GBFlatSelectableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBFlatSelectableButton.m; sourceTree = "<group>"; };
 		070BDB5D1905CA9D005CB41D /* UIColor+GBFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GBFlatButton.h"; sourceTree = "<group>"; };
 		070BDB5E1905CA9D005CB41D /* UIColor+GBFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GBFlatButton.m"; sourceTree = "<group>"; };
-		070BDB621905D5BC005CB41D /* SlideUpContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideUpContentView.h; sourceTree = "<group>"; };
-		070BDB631905D5BC005CB41D /* SlideUpContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideUpContentView.m; sourceTree = "<group>"; };
+		070BDB621905D5BC005CB41D /* NBSlideUpViewSampleContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBSlideUpViewSampleContentView.h; sourceTree = "<group>"; };
+		070BDB631905D5BC005CB41D /* NBSlideUpViewSampleContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBSlideUpViewSampleContentView.m; sourceTree = "<group>"; };
 		070BDB651905E56B005CB41D /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,9 +140,9 @@
 				070BDB221905AE9A005CB41D /* Main.storyboard */,
 				070BDB251905AE9A005CB41D /* NBViewController.h */,
 				070BDB261905AE9A005CB41D /* NBViewController.m */,
-				070BDB621905D5BC005CB41D /* SlideUpContentView.h */,
-				070BDB631905D5BC005CB41D /* SlideUpContentView.m */,
-				070BDB531905C8CB005CB41D /* SlideUpContentView.xib */,
+				070BDB621905D5BC005CB41D /* NBSlideUpViewSampleContentView.h */,
+				070BDB631905D5BC005CB41D /* NBSlideUpViewSampleContentView.m */,
+				070BDB531905C8CB005CB41D /* NBSlideUpViewSampleContentView.xib */,
 				070BDB281905AE9A005CB41D /* Images.xcassets */,
 				070BDB171905AE99005CB41D /* Supporting Files */,
 			);
@@ -272,7 +272,7 @@
 				070BDB1B1905AE99005CB41D /* InfoPlist.strings in Resources */,
 				070BDB241905AE9A005CB41D /* Main.storyboard in Resources */,
 				070BDB661905E56B005CB41D /* close.png in Resources */,
-				070BDB541905C8CB005CB41D /* SlideUpContentView.xib in Resources */,
+				070BDB541905C8CB005CB41D /* NBSlideUpViewSampleContentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +294,7 @@
 				070BDB271905AE9A005CB41D /* NBViewController.m in Sources */,
 				070BDB211905AE9A005CB41D /* NBAppDelegate.m in Sources */,
 				070BDB611905CA9D005CB41D /* UIColor+GBFlatButton.m in Sources */,
-				070BDB641905D5BC005CB41D /* SlideUpContentView.m in Sources */,
+				070BDB641905D5BC005CB41D /* NBSlideUpViewSampleContentView.m in Sources */,
 				070BDB1D1905AE9A005CB41D /* main.m in Sources */,
 				070BDB471905AEB9005CB41D /* NBSlideUpView.m in Sources */,
 				070BDB5F1905CA9D005CB41D /* GBFlatButton.m in Sources */,

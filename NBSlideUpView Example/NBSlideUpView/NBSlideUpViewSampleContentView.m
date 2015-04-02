@@ -1,7 +1,7 @@
-#import "SlideUpContentView.h"
+#import "NBSlideUpViewSampleContentView.h"
 #import "NBSlideUpView.h"
 
-@implementation SlideUpContentView
+@implementation NBSlideUpViewSampleContentView
 
 - (IBAction)sampleButton:(id)sender {
     [((NBSlideUpView *)self.superview.superview) animateOut];
