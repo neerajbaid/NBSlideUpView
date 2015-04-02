@@ -9,7 +9,14 @@
                               viewablePixels + superview.frame.size.height/3.0); // 3.0 is the default dragMultiplier, as set on self below.
     self = [super initWithFrame:frame];
     if (self) {
+        // Default values.
         self.backgroundColor = [UIColor clearColor];
+        self.arrowAlpha = 0.7;
+        self.viewablePixels = viewablePixels;
+        self.dragMultiplier = 3.0;
+        self.initialSpringVelocity = 1;
+        self.animateInOutTime = 0.5;
+        self.springDamping = 0.8;
         
         CGRect contentViewFrame = frame;
         contentViewFrame.origin.y = 0;
@@ -19,19 +26,11 @@
         self.contentView.backgroundColor = [UIColor grayColor];
         self.contentView.layer.cornerRadius = 15;
         
-        self.arrowAlpha = 0.7;
-        self.viewablePixels = viewablePixels;
-        self.dragMultiplier = 3.0;
-        
         UIImageView *arrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"close.png"]];
         arrowImageView.alpha = self.arrowAlpha;
         CGRect arrowFrame = CGRectMake((superview.frame.size.width-37)/2.0, 11, 37, 10);
         arrowImageView.frame = arrowFrame;
         [self addSubview:arrowImageView];
-        
-        self.initialSpringVelocity = 1;
-        self.animateInOutTime = 0.5;
-        self.springDamping = 0.8;
         
         [superview addSubview:self];
         
