@@ -3,9 +3,10 @@
 @implementation NBSlideUpView
 
 - (id)initWithSuperview:(UIView *)superview viewableHeight:(CGFloat)viewablePixels {
-    self.viewablePixels = viewablePixels;
-    self.dragMultiplier = 3.0;
-    CGRect frame = CGRectMake(0, superview.frame.size.height, superview.frame.size.width, self.viewablePixels + superview.frame.size.height/self.dragMultiplier);
+    CGRect frame = CGRectMake(0,
+                              superview.frame.size.height,
+                              superview.frame.size.width,
+                              viewablePixels + superview.frame.size.height/3.0); // 3.0 is the default dragMultiplier, as set on self below.
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
@@ -19,6 +20,8 @@
         self.contentView.layer.cornerRadius = 15;
         
         self.arrowAlpha = 0.7;
+        self.viewablePixels = viewablePixels;
+        self.dragMultiplier = 3.0;
         
         UIImageView *arrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"close.png"]];
         arrowImageView.alpha = self.arrowAlpha;
