@@ -27,7 +27,7 @@
 
 @property (nonatomic) BOOL shouldDarkenSuperview;
 @property (nonatomic) BOOL shouldTapSuperviewToAnimateOut;
-@property (nonatomic) BOOL shouldBlockSuperviewTouches;
+@property (nonatomic) BOOL shouldBlockSuperviewTouchesWhileUp;
 
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) id<NBSlideUpViewDelegate> delegate;

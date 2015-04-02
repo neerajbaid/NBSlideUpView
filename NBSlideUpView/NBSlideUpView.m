@@ -25,7 +25,7 @@
         self.springDamping = 0.8;
         self.shouldDarkenSuperview = true;
         self.shouldTapSuperviewToAnimateOut = true;
-        self.shouldBlockSuperviewTouches = true;
+        self.shouldBlockSuperviewTouchesWhileUp = true;
         self.layer.cornerRadius = 15;
         self.layer.masksToBounds = YES;
         
@@ -97,7 +97,7 @@
 }
 
 - (void)animateIn {
-    if (self.shouldBlockSuperviewTouches) {
+    if (self.shouldBlockSuperviewTouchesWhileUp) {
         self.overlayView.userInteractionEnabled = YES;
     }
     [UIView animateWithDuration:self.animateInOutTime
