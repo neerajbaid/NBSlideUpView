@@ -16,7 +16,7 @@
 - (void)animateOut;
 - (void)animateIn;
 
-@property (nonatomic) CGPoint previousTouch;
+@property (nonatomic) CGFloat arrowAlpha;
 
 @property (nonatomic) CGFloat viewablePixels;
 @property (nonatomic) CGFloat dragMultiplier;
@@ -25,7 +25,10 @@
 @property (nonatomic) CGFloat initialSpringVelocity;
 @property (nonatomic) CGFloat animateInOutTime;
 
-@property (nonatomic) CGFloat arrowAlpha;
+@property (nonatomic) BOOL shouldDarkenSuperview;
+@property (nonatomic) BOOL shouldTapSuperviewToAnimateOut;
+@property (nonatomic) BOOL shouldBlockSuperviewTouches;
+
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) id<NBSlideUpViewDelegate> delegate;
 

@@ -1,5 +1,11 @@
 #import "NBSlideUpView.h"
 
+@interface NBSlideUpView ()
+
+@property (nonatomic, strong) UIView *overlayView;
+
+@end
+
 @implementation NBSlideUpView
 
 - (id)initWithSuperview:(UIView *)superview viewableHeight:(CGFloat)viewablePixels {
@@ -17,6 +23,9 @@
         self.initialSpringVelocity = 1;
         self.animateInOutTime = 0.5;
         self.springDamping = 0.8;
+        self.shouldDarkenSuperview = true;
+        self.shouldTapSuperviewToAnimateOut = true;
+        self.shouldBlockSuperviewTouches = true;
         self.layer.cornerRadius = 15;
         self.layer.masksToBounds = YES;
         
@@ -34,9 +43,17 @@
         arrowImageView.frame = arrowFrame;
         [self addSubview:arrowImageView];
         
+        self.overlayView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,
+                                                                    superview.frame.size.width,
+                                                                    superview.frame.size.height)];
+        [self.overlayView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                       action:@selector(tappedOverlayView)]];
+        [superview addSubview:self.overlayView];
+        self.overlayView.userInteractionEnabled = NO;
         [superview addSubview:self];
         
-        UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPanned:)];
+        UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                                              action:@selector(onPanned:)];
         [self addGestureRecognizer:pan];
     }
     return self;
@@ -52,6 +69,12 @@
         self.frame = frame;
         frame.origin.y = 0;
         self.contentView.frame = frame;
+    }
+}
+
+- (void)tappedOverlayView {
+    if (self.shouldTapSuperviewToAnimateOut) {
+        [self animateOut];
     }
 }
 
@@ -74,6 +97,9 @@
 }
 
 - (void)animateIn {
+    if (self.shouldBlockSuperviewTouches) {
+        self.overlayView.userInteractionEnabled = YES;
+    }
     [UIView animateWithDuration:self.animateInOutTime
                           delay:0
          usingSpringWithDamping:self.springDamping
@@ -84,6 +110,9 @@
                                                  self.superview.frame.size.height - self.viewablePixels,
                                                  self.frame.size.width,
                                                  self.frame.size.height);
+                         if (self.shouldDarkenSuperview) {
+                             [self.overlayView setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.26]];
+                         }
                      } completion:^(BOOL completed){
                          if ([self.delegate respondsToSelector:@selector(slideUpViewDidAnimateIn:)]) {
                              [self.delegate slideUpViewDidAnimateIn:self];
@@ -92,6 +121,7 @@
 }
 
 - (void)animateOut {
+    self.overlayView.userInteractionEnabled = NO;
     [UIView animateWithDuration:self.animateInOutTime
                           delay:0
          usingSpringWithDamping:self.springDamping
@@ -102,6 +132,7 @@
                                                  self.superview.frame.size.height,
                                                  self.frame.size.width,
                                                  self.frame.size.height);
+                         [self.overlayView setBackgroundColor:[UIColor clearColor]];
                      } completion:^(BOOL completed) {
                          if ([self.delegate respondsToSelector:@selector(slideUpViewDidAnimateOut:)]) {
                              [self.delegate slideUpViewDidAnimateOut:self];

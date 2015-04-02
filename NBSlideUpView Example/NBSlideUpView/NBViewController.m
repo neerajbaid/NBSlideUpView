@@ -12,8 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NBSlideUpView *slideUpView = [[NBSlideUpView alloc] initWithSuperview:self.view viewableHeight:200];
-    self.slideUpView = slideUpView;
+    self.slideUpView = [[NBSlideUpView alloc] initWithSuperview:self.view viewableHeight:200];
     self.slideUpView.delegate = self;
     
     NBSlideUpViewSampleContentView *sampleContentView = [[NBSlideUpViewSampleContentView alloc] initWithDelegate:self];
